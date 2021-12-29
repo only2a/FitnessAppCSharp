@@ -12,11 +12,19 @@ namespace FitnessApp.CMD
     {
         static void Main(string[] args)
         {
-            var text = "Приложение FitnessApp";
-            int centerX = (Console.WindowWidth / 2) - (text.Length / 2);
-            Console.SetCursorPosition(centerX, 0);
-            Console.WriteLine(text);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;  
+            var text = (@"                           ______ _ _                                            
+                          |  ____(_) |                         /\                
+                          | |__   _| |_ _ __   ___  ___ ___   /  \   _ __  _ __  
+                          |  __| | | __| '_ \ / _ \/ __/ __| / /\ \ | '_ \| '_ \ 
+                          | |    | | |_| | | |  __/\__ \__ \/ ____ \| |_) | |_) |
+                          |_|    |_|\__|_| |_|\___||___/___/_/    \_\ .__/| .__/ 
+                                                                    | |   | |    
+                                                                    |_|   |_|");
             
+            Console.WriteLine(text);
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+
             Console.WriteLine("Введите имя пользователя");
             var name = Console.ReadLine();
 
@@ -67,7 +75,7 @@ namespace FitnessApp.CMD
                 }
                 else
                 {
-                    Console.WriteLine($"Неверный формат {name}");
+                    Console.WriteLine($"Неверный формат {name}а");
                 }
             }
         }
